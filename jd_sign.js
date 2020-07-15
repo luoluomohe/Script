@@ -1,4 +1,4 @@
-﻿
+
 console.log("京东签到金豆脚本开始!");
 
 try {
@@ -14,15 +14,17 @@ try {
     $httpClient.get(params, function (e, r, d) {
         console.log("错误:" + e);
         console.log("返回:" + d);
-        var data = JSON.parse(d);
-        if (data.data.dailyAward.title.indexOf("签到成功") > -1) {
-            $notification.post('京东签到成功!', '京东签到成功', "获得" + data.data.dailyAward.beanAward.beanCount + "个金豆");
+
+        if (d.indexOf("签到成功") > -1) {
+            var jdnum = d.substring((d.indexOf("beanCount") + 12), (d.indexOf("beanImgUrl") - 3));
+            $notification.post('京东签到成功!', '京东签到成功', "获得" + jdnum + "个金豆");
         }
-        else if (data.data.dailyAward.title.indexOf("已签到") > -1) {
-            $notification.post('京东今天已签到!', '京东今天已签到', "获得" + data.data.dailyAward.beanAward.beanCount + "个金豆");
+        else if (d.indexOf("已签到") > -1) {
+            var jdnum = d.substring((d.indexOf("beanCount") + 12), (d.indexOf("beanImgUrl") - 3));
+            $notification.post('京东今天已签到!', '京东今天已签到', "获得" + jdnum + "个金豆");
         }
         else {
-            $notification.post('京东签到失败!', '京东签到失败', data.data.dailyAward.title);
+            $notification.post('京东签到失败!', '京东签到失败', d);
         }
     });
 

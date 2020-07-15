@@ -44,17 +44,22 @@ try {
                         if (data.indexOf('"status_code":0') > -1) {
 
                             likeCount += likeNum;
+                            console.log("点赞总数:" + likeCount);
+
                             forPost();
                         }
                         else if (data.indexOf("手速太快了") > -1) {
 
-                            $notification.post('点赞已到上限!', '点赞个数:' + likeCount, data);
+                            $notification.post('点赞已到上限!', '点赞总数:' + likeCount, data);
                             console.log("点赞已上限,个数:" + likeCount + ";" + data);
                         }
                         else if (data.indexOf("请登录") > -1) {
 
                             $notification.post('请登录!', '请登录:', data);
                             console.log("请登录;" + data);
+                        }
+                        else {
+                            $notification.post('错误!', '错误:', data);
                         }
 
                     });

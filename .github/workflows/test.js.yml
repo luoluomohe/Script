@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule: 
-    - cron: '0 11,21 * * *'
+    - cron: '10/* * * * *'
 
 jobs:
   build:
@@ -31,5 +31,5 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: npm install request
-    - run: node test.js
+    - run: node test4.js
     

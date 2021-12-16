@@ -7,15 +7,15 @@
 //电报交流群:https://t.me/passerbyb2021
 
 // [mitm]
-// hostname = *.snssdk.com
+// hostname = *.snssdk.com,*.amemv.com
 
 //==========================Quantumultx=========================
 // [rewrite_local]
-// snssdk.com/luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js
+// luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js
 
 // =========================Loon=============================
 // [Script]
-// snssdk.com/luckycat/aweme/v1/task/done/read? script-path=https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js, requires-body=true, timeout=10, tag=抖音极速版刷音符
+// luckycat/aweme/v1/task/done/read? script-path=https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js, requires-body=true, timeout=10, tag=抖音极速版刷音符
 
 //新版APP加密无法抓包,需要降级到14.7.0及以下版本
 //多账号版,支持用手机抓包headers,不支持手机跑脚本刷音符

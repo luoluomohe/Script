@@ -1,16 +1,24 @@
 
-//重写添加成功后刷视频,等红包进度圈满后就会提示获取header成功,多获取几个header,最好获取五十个以上,多多益善
+
+//重写添加成功后刷视频,等红包进度圈满后就会提示获取header成功,多获取几个header,最好获取一百个个以上,多多益善
 //获取多个header成功后再定时循环执行脚本任务,间隔时间最好在30s以上,每天稳定在10000音符左右
 //且刷且珍惜,刷的别太嚣张,说不定过几天就封了
-//如果需要在服务器上用nodejs运行则需要用boxjs把缓存dyheadlist导出放到相同路径文件下下dyjs.json文件里
+//如果需要在服务器上用nodejs运行则需要用boxjs(数据查看器,关键字:dyjs_new)把缓存dyheadlist导出放到相同路径文件下下dyjs_new.json文件里
 //电报交流群:https://t.me/passerbyb2021
 
 // [mitm]
 // hostname = *.snssdk.com
 
-//新版APP加密无法抓包,需要降级到14.7.0及以下版本
+//==========================Quantumultx=========================
+// [rewrite_local]
+// snssdk.com/luckycat/aweme/v1/task/done/read? url script-request-header https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js
 
-//多账号版,不支持手机
+// =========================Loon=============================
+// [Script]
+// snssdk.com/luckycat/aweme/v1/task/done/read? script-path=https://raw.githubusercontent.com/passerby-b/Script/master/dyjs_new.js, requires-body=true, timeout=10, tag=抖音极速版刷音符
+
+//新版APP加密无法抓包,需要降级到14.7.0及以下版本
+//多账号版,支持用手机抓包headers,不支持手机跑脚本刷音符
 
 
 let isShowCionDetail = false;//显示收益详情

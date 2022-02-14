@@ -20,7 +20,7 @@
 // snssdk.com/luckycat/aweme/v1/task/done/read? script-path=https://gitee.com/passerby-b/javascript/raw/master/dyjs.js, requires-body=true, timeout=10, tag=抖音极速版刷音符
 // cron "*/30 * * * * *" script-path=https://gitee.com/passerby-b/javascript/raw/master/dyjs.js,tag=抖音极速版刷音符
 
-//新版APP加密无法抓包,需要降级到14.7.0及以下版本
+//新版APP加密无法抓包,需要降级到14.9.0及以下版本,如果登录提示版本过低则先安装最新版的登录后在覆盖安装旧版
 
 let isShowCionDetail = false;//显示收益详情
 let isDelete = false;//是否删除无效headers

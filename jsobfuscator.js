@@ -10,7 +10,7 @@ var obfuscationResult = JavaScriptObfuscator.obfuscate(rawdata, {
     deadCodeInjection: true,//死代码注入
     deadCodeInjectionThreshold: 1,//死代码注入阈值
     debugProtection: false,//调试保护
-    debugProtectionInterval: true,//调试保护间隔
+    debugProtectionInterval: 100,//调试保护间隔
     disableConsoleOutput: false,//禁用控制台输出
     identifierNamesGenerator: 'hexadecimal',//标识符名称生成器
     log: false,//日志
